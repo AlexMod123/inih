@@ -3,9 +3,5 @@ license (see LICENSE). The original project home page is localted at:
 
 http://code.google.com/p/inih/
 
-This version provides:
-
- - source code syncronized with r29;
- - CMake build system;
- - pkg-config support;
+This project for MAC OS on arm
 

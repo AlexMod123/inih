@@ -1,14 +1,14 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.25)
 project(inih)
-
+set(CMAKE_CXX_STANDARD 20)
 INCLUDE(GNUInstallDirs)
 
 add_subdirectory(include)
 add_subdirectory(lib)
 
-if( CMAKE_SYSTEM_PROCESSOR STREQUAL "x86_64" )
+if( CMAKE_SYSTEM_PROCESSOR STREQUAL "arm64" )
   set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS "-fPIC")
-endif( CMAKE_SYSTEM_PROCESSOR STREQUAL "x86_64" )
+endif( CMAKE_SYSTEM_PROCESSOR STREQUAL "arm64" )
 
 configure_file(inih.pc.in inih.pc @ONLY)
 configure_file(inihcpp.pc.in inihcpp.pc @ONLY)
